@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aks-docker-jenkins-git-ansible
+  labels:
+    app: aks-docker-jenkins-git-ansible
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: aks-docker-jenkins-git-ansible
+  template:
+    metadata:
+      labels:
+        app: aks-docker-jenkins-git-ansible
+    spec:
+      containers:
+      - name: aks-docker-jenkins-git-ansible
+        image: michelgm/aks-docker-jenkins-git-ansible
+        ports:
+        - containerPort: 80
