@@ -5,8 +5,7 @@ metadata:
     labels:
        app: aks-docker-jenkins-git-ansible
 spec:
-  type: LoadBalancer
-  ports:
+- ports:
     port: 8080
     targetPort: 80
     nodeport: 31200
