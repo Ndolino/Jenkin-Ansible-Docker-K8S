@@ -5,8 +5,8 @@ metadata:
     labels:
        app: aks-docker-jenkins-git-ansible
 spec:
-- ports:
-    port: 8080
+  ports:
+  - port: 8080
     targetPort: 80
     nodeport: 31200
   selector:
